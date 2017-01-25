@@ -50,65 +50,51 @@ public class IntList {
 	
 	public int tail(){
 		
-		// LÖSUNG MIT REKURSION
+		// LOESUNG MIT REKURSION
 		if(this.next.next == null){
 			return this.value;
 		} else {
 			return this.next.tail();
 		}
 		
-		// EINFACHE LÖSUNG
+		// EINFACHE LOESUNG
 		//return this.get(this.size()-1);
 		
 	}
 	
 	public void addFirst(int value){
 		
-		//System.out.println(this);
-		//this.add(value);
-		
-		//IntList tempObj = new IntList();
-		//tempObj.value = value;
-		//tempObj.next = this;
-		
-		//this.add(value);
-		
-		// Temporaere Kopie
-		//IntList tempObj = this;
-		//this.next = tempObj;
-		//this.value = value;
-		
-		//tempObj.value = value;
-		//tempObj.next = ;
-		
-
-		//this.value = value;
-		//this.next = tempObj;
-		
-		//this.value = value;
-		//this.next = new IntList();
-		
-		if(this.next == null){
-			this.value = this.next.value;
+		if(this.next.next == null){
+			this.next.value = this.value;
+			this.next.next = new IntList();
 		} else {
-			//return this.next.size() + 1;
+			this.next.addFirst(value);
+			this.next.value = this.value;
+			this.value = value;
+		}
+
+	}
+	
+
+	public void delete(int index){
+		
+		if(index == 0){
+			//this.next = this.next.next;
+			//this.next.next = null;
+			this.next = null;
+		} else {
+			this.next.delete(index - 1);
+			
 		}
 		
-		//for (int i = 0; i < this.size(); i++) {
+		
+		
+		for (int i = 0; i < index; i++) {
 			
-		//}
+			
+			
+		}
 		
-		
-		
-	}
-	
-
-	public void test (){
-		
-		System.out.println(this.next);
-		
-	}
-	
-	
+	}	
 	
 }
