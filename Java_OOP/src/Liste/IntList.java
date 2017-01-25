@@ -42,4 +42,73 @@ public class IntList {
 		
 	}
 	
+	public int head() {
+		
+		return this.value;
+		
+	}
+	
+	public int tail(){
+		
+		// LÖSUNG MIT REKURSION
+		if(this.next.next == null){
+			return this.value;
+		} else {
+			return this.next.tail();
+		}
+		
+		// EINFACHE LÖSUNG
+		//return this.get(this.size()-1);
+		
+	}
+	
+	public void addFirst(int value){
+		
+		//System.out.println(this);
+		//this.add(value);
+		
+		//IntList tempObj = new IntList();
+		//tempObj.value = value;
+		//tempObj.next = this;
+		
+		//this.add(value);
+		
+		// Temporaere Kopie
+		//IntList tempObj = this;
+		//this.next = tempObj;
+		//this.value = value;
+		
+		//tempObj.value = value;
+		//tempObj.next = ;
+		
+
+		//this.value = value;
+		//this.next = tempObj;
+		
+		//this.value = value;
+		//this.next = new IntList();
+		
+		if(this.next == null){
+			this.value = this.next.value;
+		} else {
+			//return this.next.size() + 1;
+		}
+		
+		//for (int i = 0; i < this.size(); i++) {
+			
+		//}
+		
+		
+		
+	}
+	
+
+	public void test (){
+		
+		System.out.println(this.next);
+		
+	}
+	
+	
+	
 }
