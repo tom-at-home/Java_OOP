@@ -31,7 +31,16 @@ public class App {
 		}
 		
 		System.out.println("Wert vom letztem, leeren Element: " + intList.get(intList.size()));
-		
+
+		// AUFGABE A4
+		System.out.println("-------- AUFGABE A4 --------");
+		System.out.println("Ist die 777 ist in der Liste enthalten? > " + intList.contains(777));
+		System.out.println("Ist die 5 ist in der Liste enthalten? > " + intList.contains(5));
+		System.out.println("Ist die 8 ist in der Liste enthalten? > " + intList.contains(8));
+		System.out.println("Ist die -5 ist in der Liste enthalten? > " + intList.contains(-5));
+		System.out.println("Ist die 10 ist in der Liste enthalten? > " + intList.contains(10));
+		System.out.println("Ist die 100 ist in der Liste enthalten? > " + intList.contains(100));
+		System.out.println("Ist die 0 ist in der Liste enthalten? > " + intList.contains(0));
 		
 	}
 

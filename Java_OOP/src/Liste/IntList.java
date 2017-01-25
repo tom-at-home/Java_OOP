@@ -78,23 +78,20 @@ public class IntList {
 
 	public void delete(int index){
 		
-		if(index == 0){
-			//this.next = this.next.next;
-			//this.next.next = null;
-			this.next = null;
-		} else {
-			this.next.delete(index - 1);
-			
+		
+		
+	}
+	
+	public boolean contains(int value){
+		
+		// EINFACHE LOESUNG, NICHT REKURSIV
+		for(int i = 0; i < this.size(); i++){
+			if(this.get(i) == value)
+				return true;
 		}
 		
-		
-		
-		for (int i = 0; i < index; i++) {
+		return false;
 			
-			
-			
-		}
-		
-	}	
+	}
 	
 }
