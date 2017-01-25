@@ -22,15 +22,15 @@ public class App {
 		
 		// AUFGABE A2
 		System.out.println("-------- AUFGABE A2 --------");
-		System.out.println("SIZE BEFORE: " + intList.size());
+		System.out.println("LIST SIZE BEFORE: " + intList.size());
 		intList.addFirst(777);
-		System.out.println("SIZE AFTER: " + intList.size());
+		System.out.println("LIST SIZE AFTER: " + intList.size());
 		
 		for (int i = 0; i < intList.size(); i++) {
 			System.out.println(i + ". Element der IntList: " + intList.get(i));
 		}
 		
-		System.out.println("Wert vom letztem, leeren Element: " + intList.get(intList.size()));
+		System.out.println("Wert vom letzten, leeren Element: " + intList.get(intList.size()));
 
 		// AUFGABE A4
 		System.out.println("-------- AUFGABE A4 --------");
