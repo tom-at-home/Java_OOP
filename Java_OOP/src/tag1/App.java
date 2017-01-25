@@ -122,7 +122,8 @@ public class App {
 		r1.showAllGrandchildren();
 		System.out.println("-------------------------");
 		//r1222.showProgeny();
-		r1.showFamilyTree();
+		// Neuer Aufruf
+		r122.showFamilyTree();
 		
 	}
 	
