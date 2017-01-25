@@ -67,8 +67,8 @@ public class Human {
 
 				this.children.get(i).showProgenyShort();
 					
-			}			
-						
+			}		
+	
 		}
 		
 	}
