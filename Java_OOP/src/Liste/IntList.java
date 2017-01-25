@@ -75,10 +75,18 @@ public class IntList {
 
 	}
 	
-
 	public void delete(int index){
 		
+		// TODO: Exception erstellen, wenn index >= this.size()
+		// also über den letzten ueber add() hinzugefuegten Element liegt.
 		
+		if(index == 0){
+			this.value = this.next.value;
+			this.next = this.next.next;
+			
+		} else {
+			this.next.delete(index - 1);
+		}
 		
 	}
 	
@@ -88,10 +96,8 @@ public class IntList {
 		for(int i = 0; i < this.size(); i++){
 			if(this.get(i) == value)
 				return true;
-		}
-		
+		}	
 		return false;
-
 	}
 	
 }
