@@ -127,7 +127,31 @@ public class Human {
 	
 	public boolean hasStepbrotherOrStepsister(){
 		
-		return true;
+		if(this.hasStepparents()){
+
+			if(this.mum.relative != this.dad){
+				System.out.println("Stiefvater hat Kinder: " + this.mum.relative.children.size());
+				for(int i = 0; i < this.mum.relative.children.size(); i++){
+
+					if(this.mum.relative.children.get(i).mum != this.mum){
+						return true;
+					}
+				}
+			}
+
+			else{
+				if(this.dad.relative != this.mum){
+					for(int i = 0; i < this.dad.relative.children.size(); i++){
+						if(this.dad.relative.children.get(i).dad != this.dad){
+							return true;
+						}
+					}
+				}
+			}
+			
+		}	
+		
+		return false;
 		
 	}
 	
