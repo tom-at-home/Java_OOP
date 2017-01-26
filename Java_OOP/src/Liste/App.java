@@ -10,10 +10,8 @@ public class App {
 		intList.add(-5);
 		intList.add(10);
 
-
 		//System.out.println(intList.get(1));
 		//System.out.println(intList.size());
-		
 		
 		// AUFGABE A1
 		System.out.println("-------- AUFGABE A1 - HEAD und TAIL -------");		

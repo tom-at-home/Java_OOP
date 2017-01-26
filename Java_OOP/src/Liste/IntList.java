@@ -78,7 +78,7 @@ public class IntList {
 	public void delete(int index){
 		
 		// TODO: Exception erstellen, wenn index >= this.size()
-		// also über den letzten ueber add() hinzugefuegten Element liegt.
+		// also ueber den letzten ueber add() hinzugefuegten Element liegt.
 		
 		if(index == 0){
 			this.value = this.next.value;
