@@ -26,23 +26,6 @@ public class Human {
 		this.isMale = isMale;
 	}
 	
-	public Human bearChild(String firstname, boolean isMale){
-		
-		if(!this.isMale && this.relative != null){
-			Human child = new Human(firstname, this.lastname, 0, isMale);
-			child.mum = this;
-			child.dad = this.relative;
-			this.children.add(child);
-			this.relative.children.add(child);
-			return child;
-		}
-		else{
-			System.out.println("Diese Geburt ist so nicht moeglich!");
-			return null;			
-		}
-		
-	}
-	
 	public Human getRelative() {
 		return this.relative;
 	}	
@@ -82,10 +65,8 @@ public class Human {
 	}
 
 	/* Setze das Alter des Menschen */
-	public void celebrateBirthday(int age) {
-		if(age > this.age) {
-			this.age = age;
-		}
+	public void celebrateBirthday() {
+			this.age++;
 	}
 	
 	/* Diese Methode laesst diesen Menschen mit einem anderen 
@@ -106,6 +87,8 @@ public class Human {
 			/* Ersetze den eigenen Nachnamen 
 			 * mit dem Nachnamen des Partners */
 			this.lastname = relative.lastname;
+			
+			// Bekommen Kinder auch einen neuen Namen bei Wiederheitar ?
 		}
 	}
 	
@@ -117,6 +100,23 @@ public class Human {
 		}
 		
 	}
+	
+	public Human bearChild(String firstname, boolean isMale){
+		
+		if(!this.isMale && this.relative != null){
+			Human child = new Human(firstname, this.lastname, 0, isMale);
+			child.mum = this;
+			child.dad = this.relative;
+			this.children.add(child);
+			this.relative.children.add(child);
+			return child;
+		}
+		else{
+			System.out.println("Diese Geburt ist so nicht moeglich!");
+			return null;			
+		}
+		
+	}	
 	
 	public boolean hasStepparents(){
 		
@@ -130,9 +130,8 @@ public class Human {
 		if(this.hasStepparents()){
 
 			if(this.mum.relative != this.dad){
-				System.out.println("Stiefvater hat Kinder: " + this.mum.relative.children.size());
+				//System.out.println("Stiefvater hat Kinder: " + this.mum.relative.children.size());
 				for(int i = 0; i < this.mum.relative.children.size(); i++){
-
 					if(this.mum.relative.children.get(i).mum != this.mum){
 						return true;
 					}
@@ -141,6 +140,7 @@ public class Human {
 
 			else{
 				if(this.dad.relative != this.mum){
+					//System.out.println("Stiefmutter hat Kinder: " + this.dad.relative.children.size());
 					for(int i = 0; i < this.dad.relative.children.size(); i++){
 						if(this.dad.relative.children.get(i).dad != this.dad){
 							return true;
