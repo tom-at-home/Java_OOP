@@ -41,7 +41,7 @@ public class Program {
 		System.out.println("--------- 5.2 hasStepbrotherOrStepsister -------------");	
 		System.out.println("Frieda bekommt ein Kind names Sarah");
 		Human sarah = frieda.bearChild("Sarah", false);
-		System.out.println("Hat Hugo Stiefgeschwister? > " + hugo.hasStepbrotherOrStepsister());
+		System.out.println("Hat Hugo Stiefgeschwister? > " + hugo.hasStepsiblings());
 		System.out.println("Frieda trennt sich von Ali");
 		frieda.divorce();
 		System.out.println("Ali heiratet Alina");
@@ -50,10 +50,10 @@ public class Program {
 		Human sandra = alina.bearChild("Sandra", false);
 		System.out.println("Ali trennt sich von Alina");
 		ali.divorce();
-		System.out.println("Hat Hugo Stiefgeschwister? > " + hugo.hasStepbrotherOrStepsister());
+		System.out.println("Hat Hugo Stiefgeschwister? > " + hugo.hasStepsiblings());
 		System.out.println("Frieda heiratet wieder mit Ali");
 		frieda.marry(ali);
-		System.out.println("Hat Hugo Stiefgeschwister? > " + hugo.hasStepbrotherOrStepsister());
+		System.out.println("Hat Hugo Stiefgeschwister? > " + hugo.hasStepsiblings());
 		winston.show();
 		frieda.show();
 		ali.show();		

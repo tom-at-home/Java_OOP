@@ -113,7 +113,7 @@ public class Human {
 		}
 		else{
 			System.out.println("Diese Geburt ist so nicht moeglich!");
-			return null;			
+			return null;		
 		}
 		
 	}	
@@ -125,7 +125,7 @@ public class Human {
 
 	}
 	
-	public boolean hasStepbrotherOrStepsister(){
+	public boolean hasStepsiblings(){
 		
 		if(this.hasStepparents()){
 
