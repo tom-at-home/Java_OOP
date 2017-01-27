@@ -9,7 +9,7 @@ public class Human {
 	public ArrayList<Human> children = new ArrayList<>();
 	
 	public void swim() {		
-		System.out.println(this.firstname + " is swimming.");
+		System.out.println(this.firstname + " is schwimmend.");
 	}
 	
 	public void celebrate_birthday() {
