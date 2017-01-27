@@ -9,11 +9,11 @@ public class Human {
 	public ArrayList<Human> children = new ArrayList<>();
 	
 	public void swim() {		
-		System.out.println(this.firstname + " is swimming.");
+		System.out.println(this.firstname + " is asd.");
 	}
 	
 	public void celebrate_birthday() {
-		System.out.println(this.firstname + " has birthday.");
+		System.out.println(this.firstname + " has birthday..");
 		this.age++;
 	}
 	
